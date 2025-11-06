@@ -1,6 +1,7 @@
 package com.example.expensetracker.controller;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
@@ -80,7 +81,7 @@ public class ExpenseController {
 
     Expense e = new Expense();
         e.setName(req.name.trim());
-        e.setAmount(req.amount.setScale(2, BigDecimal.ROUND_HALF_UP));
+        e.setAmount(req.amount.setScale(2, RoundingMode.HALF_UP));
         e.setDate(parsedDate);
     e.setUserId(userId);
 

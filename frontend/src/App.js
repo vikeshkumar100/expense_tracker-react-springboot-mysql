@@ -186,10 +186,6 @@ export default function App() {
               <ExpenseList expenses={expenses} onDelete={deleteExpense} />
             )}
           </div>
-
-          <div className="footer-note card">
-            Backend API: {API_BASE}
-          </div>
         </div>
       )}
     </div>
